@@ -16,7 +16,6 @@ void times_table(void)
 			{
 				_putchar(k + '0');
 			}
-		return (-1);
 
 			if (k < 10 && j != 0)
 			{
