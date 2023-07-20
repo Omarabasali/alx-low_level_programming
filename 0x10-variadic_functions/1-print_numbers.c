@@ -7,7 +7,7 @@
  * @separator: The string to be printed between numbers.
  * @n: Is the number of integers passed to the function
  */
-void print_numbers(const char *separator, const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list nums;
 
