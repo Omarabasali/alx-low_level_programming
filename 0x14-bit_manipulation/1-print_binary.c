@@ -8,18 +8,22 @@
  */
 void print_binary(unsigned long int n)
 {
-	int bit = sizeof(n) * 8, printed = 0;
+	int v, counter = 0;
+	unsigned long int current;
 
-	while (bit)
+	for (v = 63; v >= 0; v--)
 	{
-		if (n & 1l << --bit)
+		current = n >> v;
+
+		if (current & 1)
 		{
 			_putchar('1');
-				printed++;
+			counter++;
 		}
-		else if (printed)
-			-putchar('0');
+		else if (counter)
+			_putchar('0');
 	}
-	if (!printed)
+	if (!counter)
 		_putchar('0');
 }
+
